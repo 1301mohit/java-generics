@@ -5,16 +5,8 @@ import java.util.Comparator;
 
 public class Math {
 
-    public static Integer maxValue(Integer[] intArray) {
-        return Arrays.stream(intArray).mapToInt(value -> value).max().getAsInt();
-    }
-
-    public static Double maxValue(Double[] doubleArray) {
-        return Arrays.stream(doubleArray).mapToDouble(value -> value).max().getAsDouble();
-    }
-
-    public static String maxValue(String[] stringArray) {
-        return Arrays.stream(stringArray).max(Comparator.naturalOrder()).get();
+    public static <E extends Comparable> E maxValue(E[] array) {
+        return Arrays.stream(array).max((value1, value2) -> value1.compareTo(value2)).get();
     }
 
 }
