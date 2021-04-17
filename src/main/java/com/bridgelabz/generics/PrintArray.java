@@ -4,16 +4,8 @@ import java.util.Arrays;
 
 public class PrintArray {
 
-    public static void toPrint(Integer[] intArray) {
-        Arrays.stream(intArray).forEach(System.out::println);
-    }
-
-    public static void toPrint(Double[] doubleArray) {
-        Arrays.stream(doubleArray).forEach(System.out::println);
-    }
-
-    public static void toPrint(Character[] charArray) {
-        Arrays.stream(charArray).forEach(System.out::println);
+    public static <E> void toPrint(E[] array) {
+        Arrays.stream(array).forEach(System.out::println);
     }
 
     public static void main(String[] args) {
@@ -24,4 +16,5 @@ public class PrintArray {
         toPrint(doubleArray);
         toPrint(characterArray);
     }
+
 }
