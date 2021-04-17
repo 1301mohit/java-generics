@@ -19,4 +19,10 @@ public class MathTest {
         Assertions.assertEquals(5.1, maxValue);
     }
 
+    @Test
+    void givenStringArray_ShouldReturnMaximumValue() {
+        String[] stringArray = {"aa", "pp", "ff", "dd"};
+        String maxValue = Math.maxValue(stringArray);
+        Assertions.assertEquals("pp", maxValue);
+    }
 }
