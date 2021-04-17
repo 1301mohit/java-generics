@@ -2,19 +2,22 @@ package com.bridgelabz.generics;
 
 import java.util.Arrays;
 
-public class PrintArray {
+public class PrintArray<E> {
 
-    public static <E> void toPrint(E[] array) {
-        Arrays.stream(array).forEach(System.out::println);
+    private E[] inputArray;
+
+    public PrintArray() { }
+
+    public PrintArray(E[] inputArray) {
+        this.inputArray = inputArray;
     }
 
-    public static void main(String[] args) {
-        Integer[] intArray = {1, 2, 3, 4, 5};
-        Double[] doubleArray = {1.1, 2.1, 3.1, 4.1, 5.1};
-        Character[] characterArray = {'a', 'b', 'c', 'd'};
-        toPrint(intArray);
-        toPrint(doubleArray);
-        toPrint(characterArray);
+    public void setValue(E[] inputArray) {
+        this.inputArray = inputArray;
+    }
+
+    public E[] getValue() {
+        return this.inputArray;
     }
 
 }
