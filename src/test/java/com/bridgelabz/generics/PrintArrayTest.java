@@ -38,12 +38,4 @@ public class PrintArrayTest {
         Assertions.assertArrayEquals(characterArray, printCharacterArray.getValue());
     }
 
-    @Test
-    void givenIntegerArray_ShouldReturnMaximumValue() {
-        Integer[] intArray = {1, 2, 3 ,4, 5};
-        printIntArray.setValue(intArray);
-        Integer maxValue = printIntArray.maxValue();
-        Assertions.assertEquals(5, maxValue);
-    }
-
 }

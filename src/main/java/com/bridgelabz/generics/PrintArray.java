@@ -20,7 +20,6 @@ public class PrintArray<E> {
         return this.inputArray;
     }
 
-    public Integer maxValue() {
-        return Arrays.stream(this.inputArray).mapToInt(value -> (Integer) value).max().getAsInt();
-    }
+
+
 }
