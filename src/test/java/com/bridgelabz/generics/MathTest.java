@@ -3,6 +3,8 @@ package com.bridgelabz.generics;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class MathTest {
 
     @Test
@@ -26,5 +28,15 @@ public class MathTest {
         Assertions.assertEquals("pp", maxValue);
     }
 
+    @Test
+    void givenIntegerDoubleAndStringArray_ShouldReturnMaximumValue() {
+        Integer[] intArray = {1, 2, 3 ,4, 5};
+        Double[] doubleArray = {1.1, 2.1, 3.1, 4.1, 5.1};
+        String[] stringArray = {"aa", "pp", "ff", "dd"};
+        Math<Integer,Double,String> math = new Math<>(intArray, doubleArray, stringArray);
+        Object[] expectedValue = {5, 5.1, "pp"};
+        Object[] actualValue = math.maxValue(intArray, doubleArray, stringArray);
+        Assertions.assertArrayEquals(expectedValue, actualValue);
+    }
 
 }
