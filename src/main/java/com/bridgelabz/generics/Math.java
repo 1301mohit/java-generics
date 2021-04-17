@@ -8,4 +8,8 @@ public class Math {
         return Arrays.stream(intArray).mapToInt(value -> value).max().getAsInt();
     }
 
+    public static Double maxValue(Double[] doubleArray) {
+        return Arrays.stream(doubleArray).mapToDouble(value -> value).max().getAsDouble();
+    }
+
 }

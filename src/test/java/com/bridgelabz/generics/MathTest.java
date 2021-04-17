@@ -12,4 +12,11 @@ public class MathTest {
         Assertions.assertEquals(5, maxValue);
     }
 
+    @Test
+    void givenFloatArray_ShouldReturnMaximumValue() {
+        Double[] doubleArray = {1.1, 2.1, 3.1, 4.1, 5.1};
+        Double maxValue = Math.maxValue(doubleArray);
+        Assertions.assertEquals(5.1, maxValue);
+    }
+
 }
